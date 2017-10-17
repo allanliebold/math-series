@@ -4,4 +4,4 @@
 def test_fibonacci():
     """Test fibonacci function."""
     from series import fibonacci
-    assert fibonacci(1) == 1
+    assert fibonacci(1) == 0
