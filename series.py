@@ -7,4 +7,7 @@ def fibonacci(n):
         return fibonacci(n-2) + fibonacci(n-1)
 
 def lucas(n):
-    return 0
+    if n == 1:
+        return 2
+    else: 
+        return 0
