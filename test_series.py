@@ -38,3 +38,7 @@ def test_fibonacci_type_error():
 def test_lucas_base_case():
     from series import lucas
     assert lucas(1) == 2
+
+def test_lucas_first_index():
+    from series import lucas
+    asset lucas(2) == 1 
