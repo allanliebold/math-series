@@ -50,3 +50,9 @@ def test_lucas_n_4():
 def test_lucas_n_8():
     from series import lucas
     assert lucas(8) == 29
+
+"""Tests for Sum Series"""
+
+def test_sum_series_base_case():
+    from series import sum_series
+    assert sum_series(1) == 0
