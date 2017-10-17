@@ -1,7 +1,14 @@
 """Test fibonacci and lucas functions."""
 """" python -m pytest test_series.py"""
 
-def test_fibonacci():
-    """Test fibonacci function."""
+
+def test_fibonacci_base_case():
+    """Test fibonacci function base case."""
     from series import fibonacci
     assert fibonacci(1) == 0
+
+
+def test_fibonacci_first_index():
+    """Test fibonacci function for n = 2."""
+    from series import fibonacci
+    assert fibonacci(2) == 1
