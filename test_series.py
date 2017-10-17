@@ -60,3 +60,7 @@ def test_sum_series_base_case():
 def test_sum_series_lucas():
     from series import sum_series
     assert sum_series(8, 2, 1) == 29
+
+def test_sum_series_other():
+    from series import sum_series
+    assert sum_series(5, 3, 5) == 21
