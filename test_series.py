@@ -15,7 +15,7 @@ def test_fibonacci_first_index():
     assert fibonacci(2) == 1
 
 
-def test_fibonacci_n_5():
+def test_fibonacci_n_4():
     """Test fibonacci function for n = 5. The fifth fibonacci number is 3."""
     from series import fibonacci
     assert fibonacci(4) == 2
@@ -42,3 +42,7 @@ def test_lucas_base_case():
 def test_lucas_first_index():
     from series import lucas
     assert lucas(2) == 1 
+
+def test_lucas_n_4():
+    from series import lucas
+    assert lucas(4) == 4
