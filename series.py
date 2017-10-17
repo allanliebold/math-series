@@ -21,5 +21,7 @@ def sum_series(n, first=0, second=1):
         return fibonacci(n)
     elif first == 2 and second == 1:
         return lucas(n)
-
-    return n
+    else:
+        for i in range(1, n):
+            first, second = second, first + second
+        return first
