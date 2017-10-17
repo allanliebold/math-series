@@ -9,5 +9,7 @@ def fibonacci(n):
 def lucas(n):
     if n == 1:
         return 2
-    else: 
+    elif n == 2:
+        return 1
+    else:
         return 0

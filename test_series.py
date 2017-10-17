@@ -41,4 +41,4 @@ def test_lucas_base_case():
 
 def test_lucas_first_index():
     from series import lucas
-    asset lucas(2) == 1 
+    assert lucas(2) == 1 
