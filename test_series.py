@@ -56,3 +56,7 @@ def test_lucas_n_8():
 def test_sum_series_base_case():
     from series import sum_series
     assert sum_series(1) == 0
+
+def test_sum_series_lucas():
+    from series import sum_series
+    assert sum_series(8, 2, 1) == 29
