@@ -1,7 +1,7 @@
 """Test fibonacci and lucas functions."""
 import pytest
 """" python -m pytest test_series.py"""
-
+''''Tests for Fibonacci Sequence'''
 
 def test_fibonacci_base_case():
     """Test fibonacci function base case. We're starting from n(1) = 0."""
@@ -32,3 +32,9 @@ def test_fibonacci_type_error():
     from series import fibonacci
     with pytest.raises(TypeError):
         fibonacci('string')
+
+'''Tests for Lucas'''
+
+def test_lucas_base_case():
+    from series import lucas
+    assert lucas(1) == 2
