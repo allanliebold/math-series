@@ -17,8 +17,8 @@ def lucas(n):
 
 def sum_series(n, first=0, second=1):
 
-    if n == 1 and first ==0 and second == 1:
-        return 0
+    if first ==0 and second == 1:
+        return fibonacci(n)
     elif first == 2 and second == 1:
         return lucas(n)
 
