@@ -46,3 +46,7 @@ def test_lucas_first_index():
 def test_lucas_n_4():
     from series import lucas
     assert lucas(4) == 4
+
+def test_lucas_n_8():
+    from series import lucas
+    assert lucas(8) == 29
