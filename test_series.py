@@ -17,4 +17,4 @@ def test_fibonacci_first_index():
 def test_fibonacci_n_5():
     """Test fibonacci function for n = 5. The fifth fibonacci number is 3."""
     from series import fibonacci
-    assert fibonacci(5) == 3
+    assert fibonacci(4) == 2
