@@ -1,5 +1,5 @@
 """Test fibonacci and lucas functions."""
-
+"""" python -m pytest test_series.py"""
 
 def test_fibonacci():
     """Test fibonacci function."""
