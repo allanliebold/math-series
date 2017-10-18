@@ -36,31 +36,38 @@ def test_fibonacci_type_error():
 '''Tests for Lucas'''
 
 def test_lucas_base_case():
+    """Test lucas function base case. We're starting from n(1) = 0."""
     from series import lucas
     assert lucas(1) == 2
 
 def test_lucas_first_index():
+    """Test lucas function for n = 2."""
     from series import lucas
     assert lucas(2) == 1 
 
 def test_lucas_n_4():
+    """Test lucas function for n = 4. Result should be 4"""
     from series import lucas
     assert lucas(4) == 4
 
 def test_lucas_n_8():
-    from series import lucas
-    assert lucas(8) == 29
+     """Test lucas function for n = 8. Result should be 29"""
+     from series import lucas
+     assert lucas(8) == 29
 
 """Tests for Sum Series"""
 
 def test_sum_series_base_case():
+    """Tests for base case for Sum Series"""
     from series import sum_series
     assert sum_series(1) == 0
 
 def test_sum_series_lucas():
+    """Tests if Lucas numbers are selected"""
     from series import sum_series
     assert sum_series(8, 2, 1) == 29
 
 def test_sum_series_other():
+    """Test for iterative alternate series"""
     from series import sum_series
     assert sum_series(5, 3, 5) == 21
