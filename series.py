@@ -30,16 +30,9 @@ def lucas(n):
 
 def sum_series(n, first=0, second=1):
     """In addition to n user may specify first two numbers in sequence."""
-    if n == 0:
-        return 0
-    elif first == 0 and second == 1:
-        return fibonacci(n)
-    elif first == 2 and second == 1:
-        return lucas(n)
-    else:
-        for i in range(1, n):
-            first, second = second, first + second
-        return first
+    for i in range(1, n):
+        first, second = second, first + second
+    return first
 
 
 """Main method"""
