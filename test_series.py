@@ -1,6 +1,5 @@
-"""Test functions in series.py."""
+"""Test for Fibonacci Sequence."""
 import pytest
-''''Test for Fibonacci Sequence.'''
 
 
 def test_fibonacci_base_case():
@@ -43,7 +42,7 @@ def test_lucas_base_case():
 
 
 def test_lucas_first_index():
-    """Test Lucas n 2 == 1."""
+    """Test Lucas function for n = 2."""
     from series import lucas
     assert lucas(2) == 1
 
@@ -55,7 +54,7 @@ def test_lucas_n_4():
 
 
 def test_lucas_n_8():
-    """Test Lucas n 8. Eigth number in sequence is 29."""
+    """Test lucas function for n = 8. Result should be 29."""
     from series import lucas
     assert lucas(8) == 29
 
@@ -69,13 +68,13 @@ def test_sum_series_base_case():
 
 
 def test_sum_series_lucas():
-    """Test for first 2 and second 1. Same results as Lucas."""
+    """Test if Lucas numbers are selected."""
     from series import sum_series
     assert sum_series(8, 2, 1) == 29
 
 
 def test_sum_series_other():
-    """Test for n 5 with first 3 and second 5."""
+    """Test for iterative alternate series."""
     from series import sum_series
     assert sum_series(5, 3, 5) == 21
 
@@ -84,3 +83,9 @@ def test_sum_series_other740():
     """Test for n 7 with first 4 and second 9."""
     from series import sum_series
     assert sum_series(7, 4, 0) == 20
+
+
+def test_sum_series_0():
+    """Test for n 0. Should return 0."""
+    from series import sum_series
+    assert sum_series(0) == 0

@@ -1,4 +1,5 @@
 """Functions that return the value of a specified number in a sequence."""
+"""Fibonacci Sequence"""
 
 
 def fibonacci(n):
@@ -11,6 +12,9 @@ def fibonacci(n):
         return fibonacci(n - 2) + fibonacci(n - 1)
 
 
+"""Lucas Sequence"""
+
+
 def lucas(n):
     """Similar to fibonacci but begins with 2 and 1."""
     if n == 1:
@@ -21,9 +25,14 @@ def lucas(n):
         return fibonacci(n - 1) + fibonacci(n + 1)
 
 
+"""Modified Sequence which accounts for optional arguments"""
+
+
 def sum_series(n, first=0, second=1):
     """In addition to n user may specify first two numbers in sequence."""
-    if first == 0 and second == 1:
+    if n == 0:
+        return 0
+    elif first == 0 and second == 1:
         return fibonacci(n)
     elif first == 2 and second == 1:
         return lucas(n)
