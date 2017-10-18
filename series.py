@@ -4,7 +4,9 @@
 
 def fibonacci(n):
     """Fibonacci sequence function."""
-    if n == 1:
+    if n == 0:
+        return 0
+    elif n == 1:
         return 0
     elif n == 2:
         return 1
@@ -17,7 +19,9 @@ def fibonacci(n):
 
 def lucas(n):
     """Similar to fibonacci but begins with 2 and 1."""
-    if n == 1:
+    if n == 0:
+        return 0
+    elif n == 1:
         return 2
     elif n == 2:
         return 1
