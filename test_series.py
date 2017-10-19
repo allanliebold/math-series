@@ -1,91 +1,51 @@
-"""Test for Fibonacci Sequence."""
+"""Test for Math Series functions."""
 import pytest
+from series import fibonacci, lucas, sum_series
+
+fib_data = [
+    (0, 0),
+    (1, 0),
+    (2, 1),
+    (4, 2),
+    (10, 34)
+]
+
+lucas_data = [
+    (0, 0),
+    (1, 2),
+    (2, 1),
+    (4, 4),
+    (8, 29)
+]
+
+sum_data = [
+    (0, 9, 6, 0),
+    (1, 0, 1, 0),
+    (8, 2, 1, 29),
+    (5, 3, 5, 21),
+    (7, 4, 0, 20)
+]
 
 
-def test_fibonacci_base_case():
-    """Test fibonacci function base case. We're starting from n(1) = 0."""
-    from series import fibonacci
-    assert fibonacci(1) == 0
-
-
-def test_fibonacci_first_index():
-    """Test fibonacci function for n = 2."""
-    from series import fibonacci
-    assert fibonacci(2) == 1
-
-
-def test_fibonacci_n_4():
-    """Test fibonacci function for n = 4. The fourth fibonacci number is 2."""
-    from series import fibonacci
-    assert fibonacci(4) == 2
-
-
-def test_fibonacci_n_10():
-    """Test n = 10. Tenth number is 34."""
-    from series import fibonacci
-    assert fibonacci(10) == 34
+@pytest.mark.parametrize("arg,expected", fib_data)
+def test_fibonacci(arg, expected):
+    """Test Fibonacci function."""
+    assert fibonacci(arg) == expected
 
 
 def test_fibonacci_type_error():
-    """Test n = string."""
-    from series import fibonacci
+    """Test n = string, should raise a TypeError."""
     with pytest.raises(TypeError):
         fibonacci('string')
 
-"""Test for Lucas."""
+
+@pytest.mark.parametrize("arg,expected", lucas_data)
+def test_lucas(arg, expected):
+    """Test Lucas function."""
+    assert lucas(arg) == expected
 
 
-def test_lucas_base_case():
-    """Test Lucas base case, beginning with n 1 == 2."""
-    from series import lucas
-    assert lucas(1) == 2
-
-
-def test_lucas_first_index():
-    """Test Lucas function for n = 2."""
-    from series import lucas
-    assert lucas(2) == 1
-
-
-def test_lucas_n_4():
-    """Test Lucas n 4. Fourth number in Lucas sequence is 4."""
-    from series import lucas
-    assert lucas(4) == 4
-
-
-def test_lucas_n_8():
-    """Test lucas function for n = 8. Result should be 29."""
-    from series import lucas
-    assert lucas(8) == 29
-
-"""Test for Sum Series."""
-
-
-def test_sum_series_base_case():
-    """Test for no first and second arguments passed. Default to fibonacci."""
-    from series import sum_series
-    assert sum_series(1) == 0
-
-
-def test_sum_series_lucas():
-    """Test if Lucas numbers are selected."""
-    from series import sum_series
-    assert sum_series(8, 2, 1) == 29
-
-
-def test_sum_series_other():
-    """Test for iterative alternate series."""
-    from series import sum_series
-    assert sum_series(5, 3, 5) == 21
-
-
-def test_sum_series_other740():
-    """Test for n 7 with first 4 and second 9."""
-    from series import sum_series
-    assert sum_series(7, 4, 0) == 20
-
-
-def test_sum_series_0():
-    """Test for n 0. Should return 0."""
-    from series import sum_series
-    assert sum_series(0) == 0
+@pytest.mark.parametrize("arg,first,second,expected", sum_data)
+def test_sum_series(arg, first, second, expected):
+    """Test Sum Series function."""
+    assert sum_series(arg, first, second) == expected

@@ -34,9 +34,12 @@ def lucas(n):
 
 def sum_series(n, first=0, second=1):
     """In addition to n user may specify first two numbers in sequence."""
-    for i in range(1, n):
-        first, second = second, first + second
-    return first
+    if n == 0:
+        return 0
+    else:
+        for i in range(1, n):
+            first, second = second, first + second
+        return first
 
 
 """Main method"""
