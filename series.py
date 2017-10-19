@@ -4,7 +4,7 @@
 
 def fibonacci(n):
     """Fibonacci sequence function."""
-    if n == 0:
+    if n < 1:
         return 0
     elif n == 1:
         return 0
@@ -19,7 +19,7 @@ def fibonacci(n):
 
 def lucas(n):
     """Similar to fibonacci but begins with 2 and 1."""
-    if n == 0:
+    if n < 1:
         return 0
     elif n == 1:
         return 2
@@ -34,7 +34,7 @@ def lucas(n):
 
 def sum_series(n, first=0, second=1):
     """In addition to n user may specify first two numbers in sequence."""
-    if n == 0:
+    if n < 1:
         return 0
     else:
         for i in range(1, n):
