@@ -45,4 +45,27 @@ def sum_series(n, first=0, second=1):
 """Main method"""
 
 if __name__ == "__main__":
-    main()
+    msg_fib = """
+    This module defines functions that implement mathematical series.
+    ...
+    fibonacci(n):
+        Returns the nth value in the Fibonacci series.
+    >>> fibonacci(2)
+    {}
+    """.format(fibonacci(2))
+    print(msg_fib)
+    msg_lucas = """
+    lucas(n):
+        Returns the nth value in the Lucas series.
+    >>> lucas(8)
+    {}
+    """.format(lucas(8))
+    print(msg_lucas)
+    msg_sum = """
+    sum_series(n, first=0, second=1):
+        Returns the nth value in a series with user specified first and second
+        values. If not provided these default to 0 and 1, respectively.
+    >>> sum_series(5, 4, 6)
+    {}
+    """.format(sum_series(5, 4, 6))
+    print(msg_sum)
